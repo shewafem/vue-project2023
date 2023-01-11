@@ -1,6 +1,7 @@
 <template>
-<div class="container" v-if="events.length > 0">
-    <h3>Список событий</h3>
+<h3 class="events-heading" v-if="events.length > 0">Список событий</h3>
+<h2 v-else class="events-heading--warning" style="color: red">Список событий пуст</h2>
+<div class="events-wrapper" v-if="events.length > 0">
     <transition-group name="event-list">
         <event-item
         class="event"
@@ -11,7 +12,6 @@
         />
     </transition-group>
 </div>
-<h2 v-else style="color: red">Список пуст</h2>
 </template>
 
 <script>
@@ -30,6 +30,31 @@ props: {
 </script>
 
 <style scoped>
+
+.events-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.events-heading {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 83px;
+    text-align: center;
+    text-shadow: 5px 5px 1px #8844F6;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+.events-heading--warning {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 83px;
+    text-align: center;
+    text-shadow: 5px 5px 1px #8844F6;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    color:rgba(255, 0, 0, 0.58);
+}
 .event {
     margin-top: 10px;
 }

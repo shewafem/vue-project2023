@@ -1,6 +1,5 @@
 <template>
     <div>
-    <h1>События</h1>
     <my-input
     v-model="searchQuery"
     placeholder="Поиск..."
@@ -68,12 +67,11 @@ import MyDialog from '@/components/UI/MyDialog'
                 isEventsLoading: false,
                 selectedSort: '',
                 searchQuery: '',
-                page: 1,
-                limit: 10,
                 totalPages: 0,
                 sortOptions: [
                     {value: 'name', name: 'По названию'},
                     {value: 'description', name: 'По содержимому'},
+                    {value: 'category', name: 'По категории'}
                 ],
             }
         },

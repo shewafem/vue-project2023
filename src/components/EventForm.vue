@@ -5,11 +5,31 @@
         v-model="myEvent.name"
         type="text" 
         placeholder="Название"
+        required
         />
         <my-input 
-        v-model="myEvent.description"
+        v-model="myEvent.shortDesc"
         type="text" 
         placeholder="Описание"
+        required
+        />
+        <my-input 
+        v-model="myEvent.category"
+        type="text" 
+        placeholder="Категория"
+        required
+        />
+        <my-input 
+        v-model="myEvent.date"
+        type="text" 
+        placeholder="Дата"
+        required
+        />
+        <my-input 
+        v-model="myEvent.img"
+        type="file" 
+        placeholder="Изображение"
+        required
         />
         <my-button 
         class="button" 
@@ -24,7 +44,10 @@ export default {
         return {
             myEvent: {
                 name: '',
-                description: '',
+                shortDesc: '',
+                category: '',
+                date: '',
+                img: '',
             }
         }
     },
@@ -33,7 +56,10 @@ export default {
             this.$emit('create', this.myEvent);
             this.myEvent = {
                 name: '',
-                description: '',
+                shortDesc: '',
+                category: '',
+                date: '',
+                img: '',
             };
         },
     },

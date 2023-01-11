@@ -12,9 +12,26 @@
 
 <style scoped>
 .button {
-    padding: 10px 50px;
-    border-radius: 5px;
-    background-color: purple;
+    display: block;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+    border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 20px;
+    min-width: 120px;
+}
+
+.button:hover {
+    background: #8844f6;
     color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.button:active {
+    transform: translate(5px, 5px);
+    box-shadow: none;
 }
 </style>

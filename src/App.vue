@@ -1,19 +1,19 @@
 <template>
-    <my-navbar></my-navbar>
-    <div class="app">
+    <main>
+        <my-header></my-header>
+        <div class="app">
         <router-view></router-view>
-    </div>
-    <my-footer></my-footer>
+        </div>
+        <my-footer></my-footer>
+    </main>
 </template>
 
 <script>
-import MyNavbar from './components/UI/MyNavbar.vue';
 import MyFooter from './components/UI/MyFooter.vue';
 import MyHeader from './components/UI/MyHeader.vue';
 
 export default {
     components: {
-        MyNavbar,
         MyHeader,
         MyFooter,
     }
@@ -28,8 +28,9 @@ export default {
 }
 
 .app {
-    margin-top: 10px;
-    padding: 20px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
     display: flex;
     gap: 10px;
     flex-direction: column;

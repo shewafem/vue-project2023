@@ -1,5 +1,5 @@
 <template>
-<select :value="modelValue" @change="changeOption">
+<select class="select" :value="modelValue" @change="changeOption">
     <option value="">Выберите из списка</option>
     <option 
     v-for="option in options" 
@@ -32,6 +32,23 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+.select {
+    width: auto;
+    font-family: inherit;
+    font-size: 24px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    box-shadow: 5px 5px 0px #000000;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    padding: 0 10px;
+}
 
+select option {
+    font-family: inherit;
+    border: 1px solid black;
+    border-radius: 5px;
+}
 </style>

@@ -1,14 +1,9 @@
-import Main from "@/pages/Main";
 import EventPage from "@/pages/EventPage";
 import About from "@/pages/About";
 import EventDetailedPage from '@/pages/EventDetailedPage';
 import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
-    {
-        path: '/',
-        component:  Main
-    }  ,
     {
         path: '/events',
         component:  EventPage
