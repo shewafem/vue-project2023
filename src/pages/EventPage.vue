@@ -20,9 +20,6 @@
         @create="createEvent"
         />
     </my-dialog>
-    <div v-for="myEvent in events" :key="myEvent.id">
-        <h1>Название {{ myEvent.name }}</h1>
-    </div>
     <event-list 
         :events="sortedAndSearchedEvents"
         @remove="removeEvent"

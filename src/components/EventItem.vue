@@ -1,7 +1,7 @@
 <template>
 <div class="event">
     <div class="event">
-        <img src="@/assets/{{ myEvent.url }}" alt="Событие" class="event__photo">
+        <img src="" alt="Событие" class="event__photo">
         <div class="event__info">
             <a href="#" class="event__link"><h3 class="event__heading">{{myEvent.name}}</h3></a>
             <a href="#" class="event__category">{{myEvent.category}}</a>
