@@ -49,6 +49,7 @@
 
 <style scoped>
 footer {
+    z-index: -10;
     margin-top: 100px;
     height: 309px;
     padding-top: 31px;

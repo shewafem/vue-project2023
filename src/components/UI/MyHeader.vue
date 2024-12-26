@@ -6,13 +6,14 @@
             <my-button @click="$router.push('/about')">О нас</my-button>
         </div>-->
         <div class="header__container _container">
-            <a href="#"><img class="header__logo" src="img/icons/logo.svg" alt="logo"></a>
+            <router-link to="/events"><img class="header__logo" src="img/icons/logo.svg" alt="logo"></router-link>
             <nav class="header__nav nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="tel:+79503858079" class="nav__link"><img width="25px" class="menu__icon" src="img/icons/phone.svg" alt="phone">(505) 503-4455</a></li>
                     <li class="nav__item"><router-link class="nav__link" to="/events">События</router-link></li>
                     <li class="nav__item"><router-link class="nav__link" to="/about">О нас</router-link></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Войти</a></li>
+                    <li v-if="$store.state.isAuth" class="nav__item"><a href="#" class="nav__link">Тамир</a></li>
+                    <li v-else class="nav__item"><a href="#" class="nav__link">Войти</a></li>
                 </ul>
             </nav>
         </div>
@@ -21,15 +22,18 @@
 
 <script>
     import MyButton from '@/components/UI/MyButton';
+    import MyInput from '@/components/UI/MyInput';
 
 export default {
     components: {
         MyButton,
+        MyInput,
     }
 }
 </script>
 
 <style scoped>
+
 header {
     /*background-color: #ff83cf;#FFC9C9; #FFC9E0*/
     height: auto;

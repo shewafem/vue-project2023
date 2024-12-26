@@ -1,11 +1,9 @@
 <template>
-    <main>
+    <div class="app">
         <my-header></my-header>
-        <div class="app">
         <router-view></router-view>
-        </div>
         <my-footer></my-footer>
-    </main>
+    </div>
 </template>
 
 <script>
@@ -16,7 +14,10 @@ export default {
     components: {
         MyHeader,
         MyFooter,
-    }
+    },
+    mounted() {
+        this.$store.dispatch('getEvents');
+    },
 }
 </script>
 

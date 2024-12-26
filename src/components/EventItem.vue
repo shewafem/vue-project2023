@@ -2,7 +2,7 @@
     <div class="event">
         <img :src=" 'img/events/' + myEvent.img" alt="event-image" class="event__photo">
         <div class="event__info">
-            <a href="#" class="event__link"><h3 class="event__heading">{{myEvent.name}}</h3></a>
+            <router-link :to="linkOpen" class="event__link"><h3 class="event__heading">{{myEvent.name}}</h3></router-link>
             <a href="#" class="event__category">{{myEvent.category}}</a>
             <p class="event__description">{{myEvent.shortDescription}}</p>
             <my-button 
@@ -28,6 +28,11 @@ export default {
             required: true,
         }
     },
+    computed: {
+        linkOpen () {
+            return `/events/${this.myEvent.id}`;
+        },
+    }
 }
 </script>
 

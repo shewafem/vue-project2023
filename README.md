@@ -1,19 +1,28 @@
-# test-project
+# SPA при помощи Vue.js + Vuerouter для продажи билетов на мероприятия 🎫
 
-## Project setup
+Одноменный [проект](https://github.com/shewafem/django-ticketee), но переписанный на Vue.js.
+
+Использованы HTML, CSS, BEM, Vue.js + Vuerouter.
+
+
+
+
+### Скачать зависимости
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Команда для разработки
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Команда для загрузки событий из public/main.json 
+```
+json-server --watch main.json
+```
+
+### Компиляция и minify для продакшена
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

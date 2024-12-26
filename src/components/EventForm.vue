@@ -8,7 +8,7 @@
         required
         />
         <my-input 
-        v-model="myEvent.shortDesc"
+        v-model="myEvent.description"
         type="text" 
         placeholder="Описание"
         required
@@ -27,7 +27,8 @@
         />
         <my-input 
         v-model="myEvent.img"
-        type="file" 
+        type="file"
+        accept="image/jpeg"
         placeholder="Изображение"
         required
         />
@@ -44,7 +45,7 @@ export default {
         return {
             myEvent: {
                 name: '',
-                shortDesc: '',
+                description: '',
                 category: '',
                 date: '',
                 img: '',
@@ -56,7 +57,7 @@ export default {
             this.$emit('create', this.myEvent);
             this.myEvent = {
                 name: '',
-                shortDesc: '',
+                description: '',
                 category: '',
                 date: '',
                 img: '',

@@ -1,6 +1,6 @@
-import EventPage from "@/pages/EventPage";
+import EventPage from "@/components/EventPage";
 import About from "@/pages/About";
-import EventDetailedPage from '@/pages/EventDetailedPage';
+import EventDetailedPage from '@/components/EventDetailedPage';
 import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
